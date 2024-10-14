@@ -6,25 +6,30 @@
     <title>Air Colavia</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #eef2f3;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
         header {
             background-color: #005f73;
             color: white;
-            padding: 10px 20px;
+            padding: 20px 0;
             text-align: center;
+            position: relative;
         }
         nav {
             margin: 20px 0;
+            background-color: #0a9396;
+            padding: 10px 0;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #005f73;
+            color: white;
+            font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
@@ -32,6 +37,11 @@
         .content {
             display: none;
             padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         .active {
             display: block;
@@ -41,9 +51,18 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: absolute;
+            position: relative;
             bottom: 0;
             width: 100%;
+        }
+        h2 {
+            color: #0a9396;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -51,26 +70,35 @@
 
 <header>
     <h1>Welcome to Air Colavia</h1>
+    <p>Your trusted airline for safe and comfortable travel</p>
 </header>
 
 <nav>
     <a href="#" onclick="showPage('home')">Home</a>
     <a href="#" onclick="showPage('fleet')">Current Fleet</a>
+    <a href="#" onclick="showPage('contact')">Contact Us</a>
 </nav>
 
 <div id="home" class="content active">
     <h2>About Us</h2>
-    <p>Air Colavia is dedicated to providing the best flying experience. Our modern fleet and commitment to safety make us your first choice in air travel.</p>
+    <p>At Air Colavia, we are committed to delivering an exceptional flying experience. Our modern fleet and dedication to safety ensure that you arrive at your destination comfortably and securely.</p>
 </div>
 
 <div id="fleet" class="content">
     <h2>Current Fleet</h2>
     <ul>
-        <li>Boeing 757</li>
-        <li>Boeing 767</li>
-        <li>Boeing 737</li>
+        <li><strong>Boeing 757</strong> - Known for its efficiency and comfort.</li>
+        <li><strong>Boeing 767</strong> - A versatile aircraft for medium to long-haul flights.</li>
+        <li><strong>Boeing 737</strong> - Perfect for short to medium-haul routes.</li>
     </ul>
     <p>Our aircraft are maintained to the highest standards, ensuring safety and comfort for all passengers.</p>
+</div>
+
+<div id="contact" class="content">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to reach out!</p>
+    <p>Email: <a href="mailto:info@aircolavia.com">info@aircolavia.com</a></p>
+    <p>Phone: +1 (555) 123-4567</p>
 </div>
 
 <footer>
@@ -79,12 +107,10 @@
 
 <script>
     function showPage(pageId) {
-        // Hide all pages
         const pages = document.querySelectorAll('.content');
         pages.forEach(page => {
             page.classList.remove('active');
         });
-        // Show the selected page
         document.getElementById(pageId).classList.add('active');
     }
 </script>
