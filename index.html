@@ -5,40 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Air Colavia</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
             font-family: 'Arial', sans-serif;
             background-color: #eef2f3;
             color: #333;
             margin: 0;
-            padding: 0;
             line-height: 1.6;
         }
+
         header {
             background-color: #005f73;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
+
         nav {
             margin: 20px 0;
             background-color: #0a9396;
             padding: 10px 0;
             text-align: center;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: white;
             font-weight: bold;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
+
         .content {
-            flex: 1; /* Ensure content grows and pushes footer down */
+            flex: 1; /* Allow content to grow and take available space */
             display: none;
             padding: 20px;
             max-width: 800px;
@@ -47,20 +55,22 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+
         .active {
             display: block;
         }
+
         footer {
             background-color: #005f73;
             color: white;
             text-align: center;
             padding: 10px 0;
-            /* Ensure footer sticks at the bottom if content is short */
-            margin-top: auto;
         }
+
         h2 {
             color: #0a9396;
         }
+
         @media (max-width: 600px) {
             nav a {
                 display: block;
@@ -132,7 +142,7 @@
 <div id="contact" class="content">
     <h2>Contact Us</h2>
     <p>If you have any questions or need assistance, feel free to reach out!</p>
-    <p>Email: <a href="republicofcolavia@gmail.com">republicofcolavia@gmail.com</a></p>
+    <p>Email: <a href="mailto:republicofcolavia@gmail.com">republicofcolavia@gmail.com</a></p>
 </div>
 
 <div id="va" class="content">
@@ -140,11 +150,11 @@
     <p>Join our virtual airline! Just download the liveries below for your chosen aircraft of our fleet:</p><br>
     <p>Currently this is only available for X-Plane users.</p>
     <ul>
-        <a href="file_path" download="B757-200 Livery">B757-200 Livery</a><br>
-        <a href="file_path" download="B757-300 Livery">B757-300 Livery</a><br>
-        <a href="file_path" download="B767-200 Livery">B767-200 Livery</a><br>
-        <a href="file_path" download="B767-300 Livery">B767-300 Livery</a><br>
-        <a href="file_path" download="B737-800 Livery">B737-800 Livery</a>
+        <li><a href="file_path" download="B757-200 Livery">B757-200 Livery</a></li>
+        <li><a href="file_path" download="B757-300 Livery">B757-300 Livery</a></li>
+        <li><a href="file_path" download="B767-200 Livery">B767-200 Livery</a></li>
+        <li><a href="file_path" download="B767-300 Livery">B767-300 Livery</a></li>
+        <li><a href="file_path" download="B737-800 Livery">B737-800 Livery</a></li>
     </ul>
     <p>Just go to your aircraft's liveries folder and paste in the file.</p>
 </div>
