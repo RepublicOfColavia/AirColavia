@@ -38,7 +38,7 @@
             text-decoration: underline;
         }
         .content {
-            flex: 1; /* Allow content to grow and take available space */
+            flex: 1; /* Ensure content grows and pushes footer down */
             display: none;
             padding: 20px;
             max-width: 800px;
@@ -55,6 +55,8 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+            /* Ensure footer sticks at the bottom if content is short */
+            margin-top: auto;
         }
         h2 {
             color: #0a9396;
@@ -138,11 +140,11 @@
     <p>Join our virtual airline! Just download the liveries below for your chosen aircraft of our fleet:</p><br>
     <p>Currently this is only available for X-Plane users.</p>
     <ul>
-        <a href = "file_path" download = "B757-200 Livery">
-        <a href = "file_path" download = "B757-300 Livery">
-        <a href = "file_path" download = "B767-200 Livery">
-        <a href = "file_path" download = "B767-300 Livery">
-        <a href = "file_path" download = "B737-800 Livery">
+        <a href="file_path" download="B757-200 Livery">B757-200 Livery</a><br>
+        <a href="file_path" download="B757-300 Livery">B757-300 Livery</a><br>
+        <a href="file_path" download="B767-200 Livery">B767-200 Livery</a><br>
+        <a href="file_path" download="B767-300 Livery">B767-300 Livery</a><br>
+        <a href="file_path" download="B737-800 Livery">B737-800 Livery</a>
     </ul>
     <p>Just go to your aircraft's liveries folder and paste in the file.</p>
 </div>
