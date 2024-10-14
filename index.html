@@ -6,6 +6,9 @@
     <title>Air Colavia</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             font-family: 'Arial', sans-serif;
             background-color: #eef2f3;
             color: #333;
@@ -35,6 +38,7 @@
             text-decoration: underline;
         }
         .content {
+            flex: 1; /* Allow content to grow and take available space */
             display: none;
             padding: 20px;
             max-width: 800px;
@@ -51,9 +55,6 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         h2 {
             color: #0a9396;
