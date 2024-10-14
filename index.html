@@ -173,12 +173,13 @@
         pages.forEach(page => {
             page.classList.remove('active');
         });
-        document.getElementById(pageId).classList.add('active');
+        const selectedPage = document.getElementById(pageId);
+        selectedPage.classList.add('active');
 
-        // Scroll to the bottom of the page
-        window.scrollTo({
-            top: document.body.scrollHeight, // Scroll to the bottom
-            behavior: 'smooth' // Smooth scrolling effect
+        // Scroll to the top of the selected content
+        selectedPage.scrollIntoView({
+            behavior: 'smooth', // Smooth scrolling effect
+            block: 'start' // Align the top of the content with the top of the viewport
         });
     }
 </script>
