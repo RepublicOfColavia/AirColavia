@@ -1,1 +1,93 @@
-Were working on it!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Colavia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #005f73;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Air Colavia</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('fleet')">Current Fleet</a>
+</nav>
+
+<div id="home" class="content active">
+    <h2>About Us</h2>
+    <p>Air Colavia is dedicated to providing the best flying experience. Our modern fleet and commitment to safety make us your first choice in air travel.</p>
+</div>
+
+<div id="fleet" class="content">
+    <h2>Current Fleet</h2>
+    <ul>
+        <li>Boeing 757</li>
+        <li>Boeing 767</li>
+        <li>Boeing 737</li>
+    </ul>
+    <p>Our aircraft are maintained to the highest standards, ensuring safety and comfort for all passengers.</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Air Colavia. All rights reserved.</p>
+</footer>
+
+<script>
+    function showPage(pageId) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.content');
+        pages.forEach(page => {
+            page.classList.remove('active');
+        });
+        // Show the selected page
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
